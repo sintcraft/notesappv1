@@ -1,0 +1,4 @@
+node_modules
+.env
+pruebas.js
+setup.js

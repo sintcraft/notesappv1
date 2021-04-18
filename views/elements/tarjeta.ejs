@@ -1,0 +1,11 @@
+<div class="tarjeta">
+  <h4><%= datos.title %> - <%= datos.date %>  </h4>
+  <p maxlength="12">
+    <%= datos.description %> 
+  </p>
+  <div class="botones">
+    <button class="green-btn btn" onclick="listo(<%= datos.id %>)">listo</button>
+    <button class="blue-btn btn"  onclick="edit(<%= datos.id %>)">edit</button>
+    <button class="red-btn btn"  onclick="deletable(<%= datos.id %>)">delete</button>
+  </div>
+</div>

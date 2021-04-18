@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="hola.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Horario</title>
+  </head>
+  <body>
+    <div class="table">
+      <% for( let i = 0; i < data.length; i++ ) { %>
+        <%- include('elements/tarjeta', {datos: data[i]}) %> 
+      <% } %>
+    </div>
+    <div class="manage">
+      <h4>Horario</h4>
+      <button id="createNewEntry" onclick="CreateNote()">+  Create Note!</button>
+    </div>
+    <div class="shadow" id="dashboard">
+
+    </div>
+    <script src="js/horario.js"></script>
+  </body>
+</html>

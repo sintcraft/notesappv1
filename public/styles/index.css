@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open San", sans-serif;
+  color: #17252a;
+}
+body {
+  background: #eee;
+}
+.table {
+  width: 75%;
+}
+.tarjeta {
+  width: 34vw;
+  height: auto;
+  float: left;
+  margin: 1%;
+  padding: 5px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0px 7px #000;
+}
+.tarjeta h4 {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.tarjeta p {
+  font-size: 15px;
+  width: 100%;
+  height: auto;
+}
+.tarjeta div button {
+  height: 30%;
+}
+.botones {
+  margin-top: 15px;
+}
+.btn {
+  appearance: none;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-size: 17px;
+  width: 70px;
+  border: none;
+  padding: 5px;
+}
+.green-btn {
+  background: #4caf50;
+}
+.orange-btn {
+  background: #ffa500;
+}
+.blue-btn {
+  background: #008cba;
+}
+.red-btn {
+  background: #f44336;
+}
+.manage {
+  height: 100%;
+  position: absolute;
+  left: auto;
+  right: 0;
+  margin: 0;
+  width: 25vw;
+  background: #17252a;
+}
+.manage h4 {
+  color: #fff;
+  text-align: center;
+  margin-top: 2%;
+  font-size: 30px;
+}
+#createNewEntry {
+  width: 80%;
+  position: relative;
+  top: 10%;
+  left: 10%;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  background: #008cba;
+  border-radius: 10px;
+}
+#dashboard {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 75%;
+  height: 100%;
+}
+.shadow {
+  opacity: 0;
+  z-index: -1;
+}
+.hiden {
+  z-index: 100;
+  opacity: 100;
+}
+.hiden #shadow {
+  background: #000;
+  z-index: 20;
+  opacity: 40%;
+  width: 100%;
+  height: 100%;
+}
+.hiden .form {
+  position: absolute;
+  opacity: 100%;
+  z-index: 40;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: #f9f6f4;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #000;
+}
+.hiden .form h5 {
+  font-size: 40px;
+  position: relative;
+  text-align: center;
+  top: 2%;
+}
+.hiden .form #title {
+  height: 30px;
+  width: 90%;
+  left: 5%;
+  position: relative;
+  font-size: 25px;
+  top: 20px;
+}
+.hiden .form form #date {
+  width: 90%;
+  position: relative;
+  left: 5%;
+  top: 40px;
+  font-size: 25px;
+}
+.hiden .form form #description {
+  width: 88%;
+  position: relative;
+  left: 5%;
+  font-size: 25px;
+  top: 70px;
+  height: 300px;
+  padding: 1%;
+}
+.form .btn {
+  font-size: 30px;
+  width: 130px;
+}
+#save-btn {
+  position: relative;
+  top: 80px;
+  left: 81%;
+}
+#cancel-btn {
+  position: relative;
+  top: 36px;
+  left: 64%;
+}
