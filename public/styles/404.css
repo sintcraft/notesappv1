@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open San", sans-serif;
+}
+body{
+    background: #d3d3d3;
+}
+h1{
+    position: absolute;
+    font-size: 1000%;
+    left: auto;
+    right: 66%;
+    top: 15%;
+}
+p{
+    font-size: 200%;
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 60%;
+    width: 29%;
+    text-align: justify;
+}
+img{
+    width: 35%;
+    position: absolute;
+    top: 7%;
+    left: auto;
+    right: 15%;
+}

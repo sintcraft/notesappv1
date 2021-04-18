@@ -13,6 +13,10 @@ router.get('/', function (req, res) {
 })
 
 router.get('/:id', async function (req, res) {
+    if(!parseInt(req.params.id) >0){
+        res.redirect('/404')
+        return
+    }
     dataBase.getQuerie('SELECT * FROM notes WHERE id=?', [parseInt(req.params.id)]).then(row => {
         if (!row[0]) {
             res.json({

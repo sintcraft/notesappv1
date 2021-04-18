@@ -20,13 +20,13 @@ const cancel = () => {
   caja.className = "shadow"
   caja.innerHTML = ""
 }
-const deletable = (id) => {
+const deletable = (id, where) => {
   var caja = document.getElementById("dashboard");
   caja.className = "hiden";
   caja.innerHTML = `
   <div id="shadow"></div>
   <div class="form" style="height: 30%;">
-    <form action="/delete-note/${id}" method="post">
+    <form action="/delete-note/${where}/${id}" method="post">
       <h5>Are you sure to delete this?</h5>
       <input id = "title" name="password" type="password" placeholder="Enter your password">
       <input id = "save-btn" type="submit" class="btn green-btn" value="Delete">
@@ -60,6 +60,17 @@ const edit = async (id) => {
 const listo = (id) => {
   const http = new XMLHttpRequest
   const url = "/ready/"+id
+  http.open('POST', url)
+  http.send()
+  let hijo = document.getElementById(id)
+  if(hijo.parentElement){
+    hijo.parentElement.removeChild(hijo)
+  }
+}
+
+const relist = (id) => {
+  const http = new XMLHttpRequest
+  const url = "/relist/"+id
   http.open('POST', url)
   http.send()
   let hijo = document.getElementById(id)

@@ -1,0 +1,10 @@
+<div class="tarjeta" id="<%= datos.id %>">
+  <h4><%= datos.title %> - <%= datos.date %>  </h4>
+  <p maxlength="12">
+    <%= datos.description %> 
+  </p>
+  <div class="botones">
+    <button class="orange-btn btn" onclick="relist(<%= datos.id %>)">Relist</button>
+    <button class="red-btn btn"  onclick="deletable(<%= datos.id %> , 'archived')">delete</button>
+  </div>
+</div>

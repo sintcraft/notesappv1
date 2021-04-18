@@ -19,7 +19,7 @@ backendRouter.post("/new-note", function (req, res) {
       res.redirect("/");
     });
 });
-backendRouter.post("/delete-note/:id", function (req, res) {
+backendRouter.post("/delete-note/:where/:id", function (req, res) {
   var passwordAdmin = process.env.passwordAdmin || "admin";
   if (req.body.password != passwordAdmin) {
     res.redirect("/");
@@ -28,7 +28,11 @@ backendRouter.post("/delete-note/:id", function (req, res) {
   dataBase
     .runQuerie("DELETE FROM notes WHERE id=?", [req.params.id])
     .then((xd) => {
-      res.redirect("/");
+      if(req.params.where=="archived"){
+        res.redirect('/archived')
+      }else{
+        res.redirect('/')
+      }
     });
 });
 backendRouter.post("/edit-note/:id", function (req, res) {
@@ -57,5 +61,15 @@ backendRouter.post("/ready/:id", function (req, res) {
       })
     );
 });
+backendRouter.post('/relist/:id', function(req, res) {
+  dataBase
+  .runQuerie("UPDATE notes SET status=? WHERE id=?", [1, req.params.id])
+  .then(
+    res.json({
+      error: null,
+      action: true,
+    })
+  );
+})
 
 module.exports = backendRouter;
