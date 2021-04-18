@@ -56,6 +56,18 @@ const edit = async (id) => {
   </div>
   `
 }
+
+const listo = (id) => {
+  const http = new XMLHttpRequest
+  const url = "/ready/"+id
+  http.open('POST', url)
+  http.send()
+  let hijo = document.getElementById(id)
+  if(hijo.parentElement){
+    hijo.parentElement.removeChild(hijo)
+  }
+}
+
 const parseDate = (dateRaw) => {
   let a = new Date().toISOString(dateRaw).replace('T', '-').split('-')
   return `${a[0]}-${a[1]}-${a[2]}`
