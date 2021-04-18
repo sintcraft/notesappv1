@@ -1,13 +1,6 @@
 require('dotenv').config()
 var mysql = require("mysql");
 var connection = mysql.createConnection(process.env.dataBaseUrl)
-/*var connection = mysql.createConnection({
-    host: "na05-sql.pebblehost.com",
-    port: "3306",
-    database: "customer_184052_sintcraft",
-    user: "customer_184052_sintcraft",
-    password: "!PvcgIcaGZmbpyVGgm39"
-})*/
 function Main(){
     connection.connect(function (error) {
         if (error) {
